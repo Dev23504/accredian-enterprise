@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 
 export default function Hero() {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState<any>(null); 
 
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/posts/1")
@@ -11,9 +11,13 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="text-center py-24 px-6 bg-gradient-to-r from-blue-50 to-blue-100">
+    <section
+      id="home"
+      className="text-center py-24 px-6 bg-gradient-to-r from-blue-50 to-blue-100"
+    >
       <h1 className="text-4xl md:text-5xl font-bold mb-6">
-        Transform Your Workforce with <span className="text-blue-600">Accredian</span>
+        Transform Your Workforce with{" "}
+        <span className="text-blue-600">Accredian</span>
       </h1>
 
       <p className="text-gray-600 mb-6">
@@ -27,7 +31,7 @@ export default function Hero() {
       {/* API Data */}
       {data && (
         <p className="mt-6 text-sm text-gray-500">
-          API Data Loaded: {data.title}
+          API Data Loaded: {data?.title}
         </p>
       )}
     </section>
