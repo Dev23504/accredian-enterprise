@@ -17,7 +17,7 @@ export default function Navbar() {
       </div>
 
       {/* Button */}
-      <button className="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition shadow-md"onClick={() => window.location.href = "#contact"}>
+      <button className="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition shadow-md"onClick={() => alert("Login feature coming soon")}>
         Login
       </button>
 
